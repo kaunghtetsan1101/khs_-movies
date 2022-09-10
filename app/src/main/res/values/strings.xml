@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Khs Movies</string>
+    <string name="app_name">Movies</string>
+
+    <string name="retry">Retry</string>
+    <string name="release_date_format" formatted="true">Release Date : %1$s</string>
+    <string name="trailers">Trailers</string>
+    <string name="summary">Summary</string>
+    <string name="reviews">Reviews</string>
+    <string name="movie">Movie</string>
+    <string name="star">Star</string>
+    <string name="search">Search......</string>
 </resources>

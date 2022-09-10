@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/Base.App.TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="title" />
+
+        <com.ms.square.android.expandabletextview.ExpandableTextView
+            android:id="@+id/exp_tv_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:animAlphaStart="1"
+            app:animDuration="200"
+            app:collapseDrawable="@drawable/ic_arrow_up"
+            app:expandDrawable="@drawable/ic_arrow_down"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:maxCollapsedLines="4">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@id/expandable_text"
+                style="@style/App.TextStyle.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:fontFamily="sans-serif-light"
+                android:lineSpacingMultiplier="1.2"
+                tools:text="content" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="@dimen/_6dp" />
+        </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

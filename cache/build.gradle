@@ -1,8 +1,7 @@
 plugins {
     id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
     id 'kotlin-kapt'
-
 }
 
 android {
@@ -26,6 +25,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = '11'
         freeCompilerArgs += ["-Xopt-in=kotlin.RequiresOptIn"]
@@ -39,6 +39,7 @@ dependencies {
 
     // Dagger
     implementation "com.google.dagger:dagger:$dagger_version"
+    testImplementation 'junit:junit:4.12'
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
 
     // Room
@@ -52,7 +53,7 @@ dependencies {
     // Paging
     api "androidx.paging:paging-runtime-ktx:$paging_version"
 
-    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'junit:junit:'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
