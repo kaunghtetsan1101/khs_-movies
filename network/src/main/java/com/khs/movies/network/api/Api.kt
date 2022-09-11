@@ -11,18 +11,18 @@ object Api {
     const val API_KEY = "9f04c49e56282d595c3ac1fa31ea742d"
 
     fun getPosterPath(posterPath: String): String {
-        return com.khs.movies.network.api.Api.BASE_POSTER_PATH + posterPath
+        return BASE_POSTER_PATH + posterPath
     }
 
     fun getBackdropPath(backdropPath: String): String {
-        return com.khs.movies.network.api.Api.BASE_BACKDROP_PATH + backdropPath
+        return BASE_BACKDROP_PATH + backdropPath
     }
 
     fun getYoutubeVideoPath(videoPath: String): String {
-        return com.khs.movies.network.api.Api.YOUTUBE_VIDEO_URL + videoPath
+        return YOUTUBE_VIDEO_URL + videoPath
     }
 
     fun getYoutubeThumbnailPath(thumbnailPath: String): String {
-        return "${com.khs.movies.network.api.Api.YOUTUBE_THUMBNAIL_URL}$thumbnailPath/default.jpg"
+        return "$YOUTUBE_THUMBNAIL_URL$thumbnailPath/default.jpg"
     }
 }

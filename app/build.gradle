@@ -55,6 +55,19 @@ dependencies {
     // Expandable
     implementation "com.ms-square:expandableTextView:0.1.4"
 
+    // Youtube Extractor
+    implementation 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
+
+    // Exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.18.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.18.1'
+
+    // SpinKit Loading
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+
     implementation "androidx.core:core-ktx:$core_ktx_version"
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.5.0'

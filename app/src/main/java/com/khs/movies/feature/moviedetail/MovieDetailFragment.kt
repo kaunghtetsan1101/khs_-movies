@@ -64,9 +64,9 @@ class MovieDetailFragment : BaseFragment<FragmentMovieDetailBinding>() {
 
     private fun setUpAdapters() {
         val videoAdapter = VideoAdapter {
-            startActivity(
-                Intent(Intent.ACTION_VIEW, Uri.parse(Api.getYoutubeVideoPath(it.key)))
-            )
+            TrailerDialog(
+                it.key
+            ).show(childFragmentManager,"trailer_dialog")
         }
         _videoAdapter = videoAdapter
         val reviewAdapter = ReviewAdapter()

@@ -14,7 +14,7 @@ interface MovieDao {
     @Query("SELECT * FROM MOVIE ORDER BY POPULARITY DESC")
     fun getMovies(): PagingSource<Int, MovieEntity>
 
-    @Query("SELECT * FROM MOVIE WHERE TITLE= :query ORDER BY POPULARITY DESC")
+    @Query("SELECT * FROM MOVIE WHERE UPPER(TITLE)= :query OR LOWER(TITLE)= :query ORDER BY POPULARITY DESC")
     fun searchMovies(query :String): PagingSource<Int, MovieEntity>
 
     @Transaction
